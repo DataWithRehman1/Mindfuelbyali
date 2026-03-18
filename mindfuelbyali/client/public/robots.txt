@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mindfuelbyali.com/sitemap.xml
