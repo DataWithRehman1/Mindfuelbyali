@@ -1,5 +1,4 @@
 <svg width="180" height="44" viewBox="0 0 180 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MindFuel ByAli logo">
   <rect width="180" height="44" rx="10" fill="white" />
-  <text x="12" y="29" fill="#1A1A2E" font-family="Inter, sans-serif" font-size="20" font-weight="800">MindFuel</text>
-  <text x="112" y="29" fill="#4F46E5" font-family="Inter, sans-serif" font-size="20" font-weight="800">ByAli</text>
+  <text x="12" y="29" fill="#1A1A2E" font-family="Inter, sans-serif" font-size="20" font-weight="800">MindFuel<tspan fill="#4F46E5">ByAli</tspan></text>
 </svg>

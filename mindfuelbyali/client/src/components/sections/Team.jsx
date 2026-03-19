@@ -68,7 +68,7 @@ function TeamCard({ member, index }) {
             height="132"
             loading="lazy"
             onError={() => setImageError(true)}
-            className="h-[104px] w-[104px] shrink-0 rounded-full border-[3px] border-indigo object-cover animate-spinSlow [animation-duration:14s] sm:h-[132px] sm:w-[132px]"
+            className="h-[104px] w-[104px] shrink-0 rounded-full border-[3px] border-indigo object-cover sm:h-[132px] sm:w-[132px]"
           />
         )}
 
