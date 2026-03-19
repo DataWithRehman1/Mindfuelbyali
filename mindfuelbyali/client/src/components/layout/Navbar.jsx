@@ -107,7 +107,7 @@ function Navbar() {
             <div className="mx-auto flex h-full max-w-site flex-col overflow-y-auto">
               <div className="flex items-center justify-between">
                 <div className="inline-flex items-center rounded-xl border border-white/20 bg-white/10 px-3 py-2 backdrop-blur">
-                  <img src="/assets/logo.svg" alt="MindFuelByAli logo" className="h-8 w-auto brightness-0 invert" loading="lazy" />
+                  <img src="/assets/logo.svg" alt="MindFuelByAli logo" className="h-8 w-auto" loading="lazy" />
                 </div>
                 <button
                   type="button"
