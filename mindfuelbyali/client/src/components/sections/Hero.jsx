@@ -132,7 +132,14 @@ function Hero() {
                 [360, 380],
                 [240, 240]
               ].map(([cx, cy], index) => (
-                <circle key={`${cx}-${cy}`} cx={cx} cy={cy} r={index === 9 ? 14 : 9} fill="url(#mfGradient)" className="animate-pulseNode" />
+                <circle
+                  key={`${cx}-${cy}`}
+                  cx={cx}
+                  cy={cy}
+                  r={index === 9 ? 14 : 9}
+                  fill="url(#mfGradient)"
+                  className="animate-none [transform-box:fill-box] [transform-origin:center] sm:animate-pulseNode"
+                />
               ))}
             </svg>
           </motion.div>
