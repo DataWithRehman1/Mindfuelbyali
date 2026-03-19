@@ -63,7 +63,6 @@ function App() {
       <main>
         <Hero />
         <Team />
-        <Services />
         <Suspense
           fallback={
             <div className="container-site py-20 text-center text-text-secondary" aria-live="polite">
@@ -72,6 +71,15 @@ function App() {
           }
         >
           <Portfolio />
+        </Suspense>
+        <Services />
+        <Suspense
+          fallback={
+            <div className="container-site py-20 text-center text-text-secondary" aria-live="polite">
+              Loading section...
+            </div>
+          }
+        >
           <Pricing />
         </Suspense>
         <Contact />
