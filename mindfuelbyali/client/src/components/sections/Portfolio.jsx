@@ -86,8 +86,16 @@ function Portfolio() {
                   ))}
                 </div>
 
-                <Button variant="outline" className="mt-6 w-full" ariaLabel={`View case study for ${project.title}`}>
-                  View Case Study →
+                <Button
+                  as="a"
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="outline"
+                  className="mt-6 w-full"
+                  ariaLabel={`View live project for ${project.title}`}
+                >
+                  View Live →
                 </Button>
               </motion.article>
             ))}

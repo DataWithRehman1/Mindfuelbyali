@@ -1,51 +1,57 @@
 const portfolio = [
   {
     tag: 'Machine Learning',
-    title: 'Customer Churn Prediction',
-    problem: 'E-commerce client losing 18% customers monthly with no early warning system.',
-    result: 'Down 34% reduction in churn after deploying real-time prediction model',
+    title: 'Face Mask Detection',
+    problem: 'Public-facing environments needed a practical way to monitor mask compliance from live camera feeds without adding manual supervision.',
+    result: 'Delivered a real-time detection pipeline that improved monitoring consistency and reduced manual screening effort during pilot runs.',
     member: 'ML Engineer',
-    tech: ['Python', 'XGBoost', 'FastAPI', 'Docker']
+    tech: ['Python', 'TensorFlow', 'OpenCV', 'Flask'],
+    link: 'https://github.com/ali-zain-ai/Face_Mask_Detection_complete-web-app'
   },
   {
     tag: 'Data Science',
-    title: 'Sales Forecasting Dashboard',
-    problem: 'Retail chain relying on manual spreadsheets for demand planning.',
-    result: 'Up 28% forecast accuracy | Saved 40+ hours/week in manual work',
+    title: 'Loan Approval Prediction',
+    problem: 'Loan teams were spending too much time manually reviewing applications without a consistent risk-screening baseline.',
+    result: 'Built a predictive approval model that accelerated first-pass decisions and supported more consistent lending recommendations.',
     member: 'Data Scientist',
-    tech: ['Python', 'Prophet', 'Power BI', 'SQL']
-  },
-  {
-    tag: 'NLP',
-    title: 'Automated Support Ticket Classifier',
-    problem: 'SaaS company manually routing 500+ daily support tickets.',
-    result: 'Up 97% classification accuracy | Down 60% response time',
-    member: 'ML Engineer',
-    tech: ['Python', 'BERT', 'Hugging Face', 'FastAPI']
-  },
-  {
-    tag: 'Computer Vision',
-    title: 'Defect Detection System',
-    problem: 'Manufacturing client with 3% defect slip-through rate costing $200K/year.',
-    result: 'Down 89% defect slip-through | ROI achieved in 2 months',
-    member: 'ML Engineer',
-    tech: ['Python', 'YOLOv8', 'OpenCV', 'Docker']
-  },
-  {
-    tag: 'Data Science',
-    title: 'Financial Risk Analytics',
-    problem: 'Fintech startup needed credit scoring model for underbanked customers.',
-    result: 'Up 22% approval rate improvement with same risk threshold',
-    member: 'Data Scientist',
-    tech: ['Python', 'Scikit-learn', 'Tableau', 'SQL']
+    tech: ['Python', 'Pandas', 'Scikit-learn', 'Matplotlib'],
+    link: 'https://github.com/DataWithRehman1/Loan-Approval-Prediction'
   },
   {
     tag: 'Machine Learning',
-    title: 'LSTM Stock Price Forecasting',
-    problem: 'Investment firm needed short-term price movement predictions.',
-    result: '73% directional accuracy on 5-day horizon forecasts',
+    title: 'Brain Tumor Detection',
+    problem: 'Early-stage MRI review required a supporting model to help flag suspicious scans quickly for further expert assessment.',
+    result: 'Developed a robust image classification workflow that improved screening speed and delivered strong validation performance.',
     member: 'ML Engineer',
-    tech: ['Python', 'TensorFlow', 'LSTM', 'Keras']
+    tech: ['Python', 'TensorFlow', 'CNN', 'OpenCV'],
+    link: 'https://github.com/ali-zain-ai/Brain-tumor-detection'
+  },
+  {
+    tag: 'Data Science',
+    title: 'Late Delivery Prediction',
+    problem: 'Operations teams had limited visibility into which orders were likely to miss expected delivery timelines.',
+    result: 'Created a delivery-risk model that helped teams prioritize at-risk shipments and improve on-time delivery planning.',
+    member: 'Data Scientist',
+    tech: ['Python', 'Pandas', 'Scikit-learn', 'Seaborn'],
+    link: 'https://github.com/DataWithRehman1/late-delivery-prediction'
+  },
+  {
+    tag: 'Machine Learning',
+    title: 'Credit Card Fraud Detection',
+    problem: 'High-volume transaction streams made it difficult to detect suspicious activity in time using manual checks.',
+    result: 'Implemented a fraud detection model with high recall for risky transactions, enabling faster intervention and reduced exposure.',
+    member: 'ML Engineer',
+    tech: ['Python', 'Scikit-learn', 'Imbalanced-learn', 'NumPy'],
+    link: 'https://github.com/ali-zain-ai/Credit-card-fraud-detection-ML'
+  },
+  {
+    tag: 'Data Science',
+    title: 'Stock Price Forecasting',
+    problem: 'Analysts needed a clearer data-driven framework to study short-term price trends and market movement patterns.',
+    result: 'Delivered a forecasting workflow combining statistical analysis and ML signals to support more informed trading research.',
+    member: 'Data Scientist + ML Engineer',
+    tech: ['Python', 'Pandas', 'LSTM', 'TensorFlow'],
+    link: 'https://github.com/DataWithRehman1/Stock-Prediction'
   }
 ];
 

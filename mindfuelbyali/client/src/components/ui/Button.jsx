@@ -14,7 +14,7 @@ const sizeClasses = {
 
 /**
  * Reusable button supporting visual variants and loading state.
- * @param {{variant?: 'primary'|'secondary'|'outline', size?: 'sm'|'md'|'lg', children: import('react').ReactNode, onClick?: () => void, disabled?: boolean, loading?: boolean, className?: string, type?: 'button'|'submit'|'reset', as?: 'button'|'a', href?: string, ariaLabel?: string}} props
+ * @param {{variant?: 'primary'|'secondary'|'outline', size?: 'sm'|'md'|'lg', children: import('react').ReactNode, onClick?: () => void, disabled?: boolean, loading?: boolean, className?: string, type?: 'button'|'submit'|'reset', as?: 'button'|'a', href?: string, target?: string, rel?: string, ariaLabel?: string}} props
  * @returns {JSX.Element}
  */
 function Button({
@@ -28,6 +28,8 @@ function Button({
   type = 'button',
   as = 'button',
   href,
+  target,
+  rel,
   ariaLabel
 }) {
   const Component = as;
@@ -37,6 +39,8 @@ function Button({
     <Component
       type={as === 'button' ? type : undefined}
       href={as === 'a' ? href : undefined}
+      target={as === 'a' ? target : undefined}
+      rel={as === 'a' ? rel : undefined}
       onClick={disabled || loading ? undefined : onClick}
       disabled={as === 'button' ? disabled || loading : undefined}
       aria-disabled={disabled || loading}
