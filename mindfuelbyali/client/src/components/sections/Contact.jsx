@@ -34,6 +34,7 @@ const budgetOptions = ['Under $1,000', '$1,000 - $3,000', '$3,000 - $10,000', 'A
  */
 function Contact() {
   const [submitState, setSubmitState] = useState('idle');
+  const [submitErrorMessage, setSubmitErrorMessage] = useState('');
 
   const {
     register,
@@ -58,13 +59,18 @@ function Contact() {
 
   const onSubmit = async (values) => {
     setSubmitState('idle');
+    setSubmitErrorMessage('');
     try {
       await axios.post(`${apiBase}/api/contact`, values, {
         headers: { 'Content-Type': 'application/json' }
       });
       setSubmitState('success');
       reset();
-    } catch {
+    } catch (error) {
+      const apiError = error?.response?.data?.error;
+      const details = error?.response?.data?.details;
+      const detailText = Array.isArray(details) && details.length ? ` (${details.join(' ')})` : '';
+      setSubmitErrorMessage(apiError ? `${apiError}${detailText}` : 'Something went wrong. Please try again.');
       setSubmitState('error');
     }
   };
@@ -191,7 +197,9 @@ function Contact() {
             <p className="mt-3 rounded-md border border-success/30 bg-success/10 px-3 py-2 text-sm font-medium text-success">Message Sent! We'll be in touch soon.</p>
           ) : null}
           {submitState === 'error' ? (
-            <p className="mt-3 rounded-md border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-400">Something went wrong. Please try again.</p>
+            <p className="mt-3 rounded-md border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-400">
+              {submitErrorMessage || 'Something went wrong. Please try again.'}
+            </p>
           ) : null}
         </motion.form>
       </div>
