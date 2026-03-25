@@ -84,7 +84,16 @@ function Contact() {
           </p>
 
           <ul className="mt-8 space-y-4 text-sm text-text-secondary">
-            <li className="flex items-start gap-3"><Mail className="mt-0.5 h-4 w-4 shrink-0 text-indigo-light" /> mindfuelbyali@gmail.com</li>
+            <li className="flex items-start gap-3">
+              <Mail className="mt-0.5 h-4 w-4 shrink-0 text-indigo-light" />
+              <a
+                href="mailto:mindfuelbyali@gmail.com"
+                className="underline decoration-border underline-offset-4 transition-colors hover:text-text-primary"
+                aria-label="Email MindFuelByAli"
+              >
+                mindfuelbyali@gmail.com
+              </a>
+            </li>
             <li className="flex items-start gap-3"><Globe className="mt-0.5 h-4 w-4 shrink-0 text-indigo-light" /> Remote - Available Worldwide</li>
             <li className="flex items-start gap-3"><Clock3 className="mt-0.5 h-4 w-4 shrink-0 text-indigo-light" /> We respond within 24 hours</li>
             <li className="flex items-start gap-3"><MessageCircle className="mt-0.5 h-4 w-4 shrink-0 text-indigo-light" /> Free 30-min strategy call available</li>
