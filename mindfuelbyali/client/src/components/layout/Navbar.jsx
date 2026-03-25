@@ -50,12 +50,12 @@ function Navbar() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.4 }}
-      className={`fixed top-0 z-50 w-full transition-all duration-300 ${scrolled ? 'nav-glass border-b border-border shadow-[0_1px_12px_rgba(0,0,0,0.06)]' : 'bg-transparent'}`}
+      className={`fixed top-0 z-50 w-full transition-all duration-300 ${scrolled ? 'nav-glass border-b border-border shadow-[0_1px_14px_rgba(124,58,237,0.2)]' : 'bg-transparent'}`}
     >
       <div className="container-site flex h-16 items-center justify-between sm:h-20">
         <a
           href="#home"
-          className="focus-ring inline-flex items-center rounded-xl border border-border/60 bg-white/85 px-3 py-2 shadow-[0_8px_24px_rgba(15,23,42,0.08)] backdrop-blur"
+          className="focus-ring inline-flex items-center rounded-xl border border-indigo/30 bg-bg-card/80 px-3 py-2 shadow-[0_8px_24px_rgba(10,10,26,0.35)] backdrop-blur"
           aria-label="MindFuelByAli home"
         >
           <img src="/assets/logo.svg" alt="MindFuelByAli logo" className="h-8 w-auto" loading="lazy" />
@@ -70,8 +70,8 @@ function Navbar() {
               smooth
               offset={-88}
               duration={500}
-              className="focus-ring link-underline cursor-pointer font-display text-[15px] font-semibold text-text-primary transition-all duration-300 hover:text-indigo"
-              activeClass="text-indigo"
+              className="focus-ring link-underline cursor-pointer font-display text-[15px] font-semibold text-text-secondary transition-all duration-300 hover:text-indigo-light"
+              activeClass="text-indigo-light"
               aria-label={`Go to ${item.label}`}
             >
               {item.label}
@@ -87,7 +87,7 @@ function Navbar() {
 
         <button
           type="button"
-          className="focus-ring rounded-button border border-border bg-white p-2.5 text-text-primary transition-all duration-300 hover:border-indigo hover:text-indigo md:hidden"
+          className="focus-ring rounded-button border border-border bg-bg-card p-2.5 text-text-primary transition-all duration-300 hover:border-indigo-light hover:text-indigo-light md:hidden"
           aria-label="Open menu"
           onClick={() => setMobileOpen(true)}
         >
@@ -102,16 +102,16 @@ function Navbar() {
             animate={{ y: 0 }}
             exit={{ y: '-100%' }}
             transition={{ duration: 0.35, ease: 'easeInOut' }}
-            className="fixed inset-0 z-[60] bg-navy px-6 py-8 md:hidden"
+            className="fixed inset-0 z-[60] bg-bg-primary px-6 py-8 md:hidden"
           >
             <div className="mx-auto flex h-full max-w-site flex-col overflow-y-auto">
               <div className="flex items-center justify-between">
-                <div className="inline-flex items-center rounded-xl border border-white/20 bg-white/10 px-3 py-2 backdrop-blur">
+                <div className="inline-flex items-center rounded-xl border border-indigo/30 bg-bg-card/70 px-3 py-2 backdrop-blur">
                   <img src="/assets/logo.svg" alt="MindFuelByAli logo" className="h-8 w-auto" loading="lazy" />
                 </div>
                 <button
                   type="button"
-                  className="focus-ring rounded-button border border-white/20 p-2.5 text-white transition-all duration-300 hover:border-white"
+                  className="focus-ring rounded-button border border-border p-2.5 text-text-primary transition-all duration-300 hover:border-indigo-light"
                   aria-label="Close menu"
                   onClick={() => setMobileOpen(false)}
                 >
@@ -129,8 +129,8 @@ function Navbar() {
                       spy
                       offset={-88}
                       duration={500}
-                      activeClass="text-cyan"
-                      className="focus-ring cursor-pointer font-display text-xl font-semibold text-white transition-all duration-300 hover:text-cyan sm:text-2xl"
+                      activeClass="text-indigo-light"
+                      className="focus-ring cursor-pointer font-display text-xl font-semibold text-text-primary transition-all duration-300 hover:text-indigo-light sm:text-2xl"
                       onClick={() => setMobileOpen(false)}
                       aria-label={`Go to ${item.label}`}
                     >

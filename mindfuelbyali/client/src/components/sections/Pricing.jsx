@@ -28,32 +28,32 @@ function Pricing() {
               whileHover={plan.highlighted ? undefined : { y: -4 }}
               className={`rounded-[20px] border p-6 transition-all duration-300 sm:p-8 lg:p-10 ${
                 plan.highlighted
-                  ? 'relative border-indigo bg-[linear-gradient(135deg,var(--color-accent-navy)_0%,#2D2B5B_100%)] text-white shadow-[0_24px_60px_rgba(79,70,229,0.3)] lg:scale-[1.04]'
-                  : 'border-border bg-white text-text-primary shadow-card'
+                  ? 'relative border-transparent bg-[linear-gradient(135deg,#2D1B69_0%,#1E1B4B_100%)] text-text-primary shadow-[0_24px_60px_rgba(124,58,237,0.4)] lg:scale-[1.04]'
+                  : 'border-border bg-bg-card text-text-primary shadow-card'
               }`}
             >
               {plan.badge ? (
-                <span className="absolute -top-3 left-6 rounded-full bg-amber-500 px-3 py-1 font-display text-xs font-semibold uppercase tracking-wide text-white sm:left-10">
+                <span className="absolute -top-3 left-6 rounded-full bg-indigo px-3 py-1 font-display text-xs font-semibold uppercase tracking-wide text-text-primary sm:left-10">
                   {plan.badge}
                 </span>
               ) : null}
 
-              <p className="font-display text-sm uppercase tracking-[0.2em] opacity-80">{plan.plan}</p>
+              <p className={`font-display text-sm uppercase tracking-[0.2em] ${plan.highlighted ? 'text-indigo-light/80' : 'text-text-muted'}`}>{plan.plan}</p>
               <p className="mt-4 text-4xl font-extrabold leading-none sm:text-[52px]">{plan.price}</p>
-              <p className="mt-2 text-sm opacity-80">{plan.priceNote}</p>
-              <p className="mt-5 text-sm leading-relaxed opacity-90">{plan.description}</p>
+              <p className={`mt-2 text-sm ${plan.highlighted ? 'text-indigo-light/60' : 'text-text-muted'}`}>{plan.priceNote}</p>
+              <p className={`mt-5 text-sm leading-relaxed ${plan.highlighted ? 'text-indigo-light/80' : 'text-text-secondary'}`}>{plan.description}</p>
 
               <ul className="mt-6 space-y-3">
                 {plan.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3 text-[15px]">
-                    <span className="text-success">✓</span>
+                  <li key={feature} className={`flex items-start gap-3 text-[15px] ${plan.highlighted ? 'text-text-primary/85' : 'text-text-secondary'}`}>
+                    <span className={plan.highlighted ? 'text-emerald-200' : 'text-success'}>✓</span>
                     <span>{feature}</span>
                   </li>
                 ))}
               </ul>
 
               <Button
-                className="mt-8 w-full"
+                className={`mt-8 w-full ${plan.highlighted ? 'bg-indigo/90 hover:bg-indigo' : 'bg-indigo hover:bg-indigo-dark'}`}
                 variant={plan.highlighted ? 'primary' : 'secondary'}
                 ariaLabel={`${plan.cta} for ${plan.plan}`}
               >

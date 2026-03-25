@@ -27,14 +27,14 @@ function Footer() {
   ];
 
   return (
-    <footer className="bg-navy text-white">
+    <footer className="bg-[#050510] text-text-primary">
       <div className="container-site grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="inline-flex items-center rounded-2xl border border-white/15 bg-white px-4 py-3 shadow-[0_10px_30px_rgba(0,0,0,0.25)]">
+          <div className="inline-flex items-center rounded-2xl border border-indigo/30 bg-bg-card px-4 py-3 shadow-[0_10px_30px_rgba(0,0,0,0.25)]">
             <img src="/assets/logo.svg" alt="MindFuelByAli logo" className="h-9 w-auto" loading="lazy" />
           </div>
-          <p className="mt-4 text-sm text-white/70">We Turn Data Into Intelligence</p>
-          <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/60">
+          <p className="mt-4 text-sm text-text-primary/50">We Turn Data Into Intelligence</p>
+          <p className="mt-4 max-w-xs text-sm leading-relaxed text-text-primary/40">
             A founder-led AI and data platform helping startups and growing teams build measurable, production-ready solutions.
           </p>
           <div className="mt-6 flex items-center gap-3">
@@ -44,7 +44,7 @@ function Footer() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="focus-ring rounded-full border border-white/20 p-2 text-white transition-all duration-300 hover:border-indigo hover:text-indigo"
+                className="focus-ring rounded-full border border-border p-2 text-text-primary/40 transition-all duration-300 hover:border-indigo-light hover:text-indigo-light"
                 aria-label={`${label} profile`}
               >
                 <Icon className="h-4 w-4" />
@@ -54,11 +54,11 @@ function Footer() {
         </div>
 
         <div>
-          <h3 className="font-display text-sm uppercase tracking-[0.2em] text-white">Services</h3>
+          <h3 className="font-display text-sm uppercase tracking-[0.2em] text-text-primary/90">Services</h3>
           <ul className="mt-5 space-y-3">
             {serviceLinks.map((link) => (
               <li key={link}>
-                <a href="#services" className="focus-ring text-sm text-white/70 transition-all duration-300 hover:text-indigo">
+                <a href="#services" className="focus-ring text-sm text-text-primary/40 transition-all duration-300 hover:text-text-primary/85">
                   {link}
                 </a>
               </li>
@@ -67,13 +67,13 @@ function Footer() {
         </div>
 
         <div>
-          <h3 className="font-display text-sm uppercase tracking-[0.2em] text-white">Platform</h3>
+          <h3 className="font-display text-sm uppercase tracking-[0.2em] text-text-primary/90">Platform</h3>
           <ul className="mt-5 space-y-3">
             {['About', 'Team', 'Portfolio', 'Pricing', 'Contact'].map((item) => (
               <li key={item}>
                 <a
                   href={`#${item.toLowerCase() === 'portfolio' ? 'work' : item.toLowerCase()}`}
-                  className="focus-ring text-sm text-white/70 transition-all duration-300 hover:text-indigo"
+                  className="focus-ring text-sm text-text-primary/40 transition-all duration-300 hover:text-text-primary/85"
                 >
                   {item}
                 </a>
@@ -83,12 +83,12 @@ function Footer() {
         </div>
 
         <div>
-          <h3 className="font-display text-sm uppercase tracking-[0.2em] text-white">Get In Touch</h3>
-          <p className="mt-5 text-sm text-white/70">mindfuelbyali@gmail.com</p>
-          <p className="mt-2 text-sm text-white/70">Remote - Worldwide</p>
+          <h3 className="font-display text-sm uppercase tracking-[0.2em] text-text-primary/90">Get In Touch</h3>
+          <p className="mt-5 text-sm text-text-primary/40">mindfuelbyali@gmail.com</p>
+          <p className="mt-2 text-sm text-text-primary/40">Remote - Worldwide</p>
           <a
             href="#contact"
-            className="focus-ring mt-5 inline-flex rounded-full border border-indigo px-4 py-2 font-display text-xs font-semibold uppercase tracking-[0.15em] text-indigo transition-all duration-300 hover:bg-indigo hover:text-white"
+            className="focus-ring mt-5 inline-flex rounded-full border border-indigo/50 px-4 py-2 font-display text-xs font-semibold uppercase tracking-[0.15em] text-indigo-light transition-all duration-300 hover:bg-indigo hover:text-text-primary"
             aria-label="Book a free call"
           >
             Book a Free Call
@@ -96,14 +96,14 @@ function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10">
-        <div className="container-site flex flex-col items-start justify-between gap-4 py-6 text-[13px] text-white/50 sm:flex-row sm:items-center">
+      <div className="border-t border-indigo/20">
+        <div className="container-site flex flex-col items-start justify-between gap-4 py-6 text-[13px] text-text-primary/30 sm:flex-row sm:items-center">
           <p>© 2025 MindFuelByAli. All rights reserved.</p>
           <div className="flex items-center gap-5">
-            <a href="#" className="focus-ring transition-all duration-300 hover:text-indigo" aria-label="Privacy policy">
+            <a href="#" className="focus-ring transition-all duration-300 hover:text-text-primary/85" aria-label="Privacy policy">
               Privacy Policy
             </a>
-            <a href="#" className="focus-ring transition-all duration-300 hover:text-indigo" aria-label="Terms of service">
+            <a href="#" className="focus-ring transition-all duration-300 hover:text-text-primary/85" aria-label="Terms of service">
               Terms of Service
             </a>
           </div>

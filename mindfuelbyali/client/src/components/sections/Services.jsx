@@ -58,6 +58,7 @@ function Services() {
           {services.map((service, index) => {
             const Icon = iconMap[service.icon];
             const badgeColor = service.tag === 'ML Engineering' ? 'indigo' : 'cyan';
+            const iconTone = service.tag === 'ML Engineering' ? 'bg-indigo/15 text-indigo-light' : 'bg-cyan/15 text-cyan';
 
             return (
               <motion.article
@@ -67,17 +68,17 @@ function Services() {
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.45, delay: index * 0.08 }}
                 whileHover={{ y: -6 }}
-                className="group rounded-card border border-border bg-white p-8 shadow-card transition-all duration-300 hover:border-l-[3px] hover:border-l-indigo hover:shadow-[0_20px_40px_rgba(79,70,229,0.12)]"
+                className="group rounded-card border border-border bg-bg-card p-8 shadow-card transition-all duration-300 hover:border-l-[3px] hover:border-l-indigo hover:shadow-[0_20px_40px_rgba(124,58,237,0.25)]"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo/10 text-indigo">
+                <div className={`flex h-12 w-12 items-center justify-center rounded-xl ${iconTone}`}>
                   {Icon ? <Icon className="h-6 w-6" /> : null}
                 </div>
                 <Badge label={service.tag} color={badgeColor} className="mt-4" />
-                <h3 className="mt-4 text-2xl font-bold leading-snug text-navy">{service.title}</h3>
+                <h3 className="mt-4 text-2xl font-bold leading-snug text-text-primary">{service.title}</h3>
                 <p className="mt-3 text-[15px] leading-[1.7] text-text-secondary">{service.desc}</p>
-                <div className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-indigo">
+                <div className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-indigo-light">
                   Learn more
-                  <span className="learn-more-link h-[2px] w-8 bg-indigo" />
+                  <span className="learn-more-link h-[2px] w-8 bg-indigo-light" />
                 </div>
               </motion.article>
             );

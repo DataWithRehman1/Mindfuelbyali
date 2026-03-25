@@ -1,21 +1,35 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,jsx}'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
+        bg: {
+          primary: '#0A0A1A',
+          secondary: '#0F0F2E',
+          card: '#1A1A3E'
+        },
+        brand: {
+          DEFAULT: '#7C3AED',
+          dark: '#6D28D9',
+          light: '#A78BFA'
+        },
+        accent: { DEFAULT: '#818CF8' },
         'bg-primary': 'var(--color-bg-primary)',
         'bg-secondary': 'var(--color-bg-secondary)',
         'bg-card': 'var(--color-bg-card)',
-        navy: { DEFAULT: 'var(--color-accent-navy)' },
+        navy: { DEFAULT: 'var(--color-navy)' },
         indigo: {
-          DEFAULT: 'var(--color-accent-indigo)',
-          dark: 'var(--color-accent-indigo-dark)'
+          DEFAULT: 'var(--color-indigo)',
+          dark: 'var(--color-indigo-dark)',
+          light: 'var(--color-indigo-light)'
         },
-        cyan: { DEFAULT: 'var(--color-accent-cyan)' },
+        cyan: { DEFAULT: 'var(--color-cyan)' },
         success: { DEFAULT: 'var(--color-success)' },
         'text-primary': 'var(--color-text-primary)',
         'text-secondary': 'var(--color-text-secondary)',
+        'text-muted': 'var(--color-text-muted)',
+        'border-hover': 'var(--color-border-hover)',
         border: 'var(--color-border)'
       },
       fontFamily: {
@@ -27,8 +41,9 @@ export default {
         button: '10px'
       },
       boxShadow: {
-        card: '0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04)',
-        'card-hover': '0 20px 40px rgba(79,70,229,0.12), 0 8px 16px rgba(0,0,0,0.08)'
+        card: '0 1px 3px rgba(124,58,237,0.15)',
+        'card-hover': '0 20px 40px rgba(124,58,237,0.25), 0 8px 16px rgba(0,0,0,0.4)',
+        glow: '0 0 32px rgba(124,58,237,0.3)'
       },
       maxWidth: {
         site: '1280px'

@@ -53,7 +53,7 @@ function TeamCard({ member, index }) {
     >
       <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
         {imageError ? (
-          <div className="flex h-[104px] w-[104px] shrink-0 items-center justify-center rounded-full border-2 border-indigo bg-gradient-to-br from-indigo to-cyan text-2xl font-extrabold text-white sm:h-[132px] sm:w-[132px] sm:text-3xl">
+          <div className="flex h-[104px] w-[104px] shrink-0 items-center justify-center rounded-full border-2 border-indigo bg-gradient-to-br from-indigo to-cyan text-2xl font-extrabold text-text-primary sm:h-[132px] sm:w-[132px] sm:text-3xl">
             {member.name
               .split(' ')
               .map((part) => part[0])
@@ -73,8 +73,8 @@ function TeamCard({ member, index }) {
         )}
 
         <div>
-          <h3 className="text-2xl font-extrabold text-navy sm:text-[26px]">{member.name}</h3>
-          <p className="mt-2 font-display text-sm font-semibold text-indigo">{member.role}</p>
+          <h3 className="text-2xl font-extrabold text-text-primary sm:text-[26px]">{member.name}</h3>
+          <p className="mt-2 font-display text-sm font-semibold text-indigo-light">{member.role}</p>
         </div>
       </div>
 
@@ -84,7 +84,7 @@ function TeamCard({ member, index }) {
           {member.skills.map((skill) => (
             <span
               key={skill}
-              className="rounded-full bg-indigo/10 px-3 py-1 text-[13px] font-semibold text-indigo"
+              className="rounded-full bg-indigo/12 px-3 py-1 text-[13px] font-semibold text-indigo-light"
             >
               {skill}
             </span>
@@ -97,7 +97,7 @@ function TeamCard({ member, index }) {
           href={member.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="focus-ring rounded-full border border-border p-2 text-text-secondary transition-all duration-300 hover:text-indigo"
+          className="focus-ring rounded-full border border-border p-2 text-text-muted transition-all duration-300 hover:text-indigo-light"
           aria-label={`${member.name} LinkedIn`}
         >
           <Linkedin className="h-5 w-5" />
@@ -106,7 +106,7 @@ function TeamCard({ member, index }) {
           href={member.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="focus-ring rounded-full border border-border p-2 text-text-secondary transition-all duration-300 hover:text-indigo"
+          className="focus-ring rounded-full border border-border p-2 text-text-muted transition-all duration-300 hover:text-indigo-light"
           aria-label={`${member.name} GitHub`}
         >
           <Github className="h-5 w-5" />

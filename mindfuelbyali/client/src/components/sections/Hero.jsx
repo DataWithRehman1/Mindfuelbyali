@@ -29,12 +29,12 @@ function Hero() {
             animate="show"
             variants={fadeUp}
             custom={0.1}
-            className="mt-6 text-3xl font-extrabold leading-[1.1] text-navy sm:text-5xl lg:text-[64px]"
+            className="mt-6 text-3xl font-extrabold leading-[1.1] text-text-primary sm:text-5xl lg:text-[64px]"
           >
             We Turn Data Into
-            <span className="mt-2 block text-indigo underline decoration-indigo decoration-2 underline-offset-8">
+            <span className="mt-2 block text-indigo-light underline decoration-indigo-light decoration-2 underline-offset-8">
               {displayedText}
-              <span className="animate-blink">|</span>
+              <span className="animate-blink text-indigo-light">|</span>
             </span>
           </motion.h1>
 
@@ -85,7 +85,7 @@ function Hero() {
               { end: 24, suffix: 'h', label: 'Average First Response' }
             ].map((stat, index) => (
               <div key={stat.label} className={`sm:pl-4 ${index > 0 ? 'sm:border-l sm:border-border' : ''}`}>
-                <p className="text-4xl font-extrabold leading-none text-navy sm:text-[42px]">
+                <p className="text-4xl font-extrabold leading-none text-text-primary sm:text-[42px]">
                   <AnimatedCounter end={stat.end} suffix={stat.suffix} />
                 </p>
                 <p className="mt-2 font-display text-sm text-text-secondary">{stat.label}</p>
@@ -109,16 +109,16 @@ function Hero() {
             <svg viewBox="0 0 480 480" className="h-auto w-full" role="img" aria-label="Abstract AI data flow illustration">
               <defs>
                 <linearGradient id="mfGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="var(--color-accent-indigo)" />
-                  <stop offset="100%" stopColor="var(--color-accent-cyan)" />
+                  <stop offset="0%" stopColor="var(--color-indigo)" />
+                  <stop offset="100%" stopColor="var(--color-cyan)" />
                 </linearGradient>
               </defs>
               <circle cx="240" cy="240" r="180" fill="none" stroke="url(#mfGradient)" strokeWidth="2" opacity="0.35" />
               {[80, 140, 240, 340, 400].map((x, index) => (
-                <line key={x} x1={x} y1={90} x2={240} y2={240} stroke="url(#mfGradient)" strokeWidth="1.8" opacity="0.4" />
+                <line key={x} x1={x} y1={90} x2={240} y2={240} stroke="url(#mfGradient)" strokeWidth="1.8" opacity="0.3" />
               ))}
               {[120, 200, 280, 360].map((x) => (
-                <line key={x} x1={x} y1={380} x2={240} y2={240} stroke="url(#mfGradient)" strokeWidth="1.8" opacity="0.4" />
+                <line key={x} x1={x} y1={380} x2={240} y2={240} stroke="url(#mfGradient)" strokeWidth="1.8" opacity="0.3" />
               ))}
               {[
                 [80, 90],
@@ -144,13 +144,13 @@ function Hero() {
             </svg>
           </motion.div>
 
-          <div className="absolute -bottom-2 left-0 hidden rounded-[14px] bg-white p-4 shadow-[0_8px_32px_rgba(79,70,229,0.15)] animate-float min-[420px]:block">
+          <div className="absolute -bottom-2 left-0 hidden rounded-[14px] border border-indigo/30 bg-bg-card p-4 shadow-[0_8px_32px_rgba(124,58,237,0.22)] animate-float min-[420px]:block">
             <p className="font-display text-xs uppercase tracking-[0.12em] text-text-secondary">Model Accuracy</p>
-            <p className="mt-1 text-2xl font-extrabold text-navy">97.4%</p>
+            <p className="mt-1 text-2xl font-extrabold text-text-primary">97.4%</p>
           </div>
 
-          <div className="absolute -left-2 top-4 hidden rounded-[14px] bg-white p-4 shadow-[0_8px_32px_rgba(6,182,212,0.15)] animate-spinSlow [animation-duration:18s] min-[480px]:block">
-            <p className="text-sm font-medium text-navy">Live Dashboard Ready</p>
+          <div className="absolute -left-2 top-4 hidden rounded-[14px] border border-cyan/30 bg-bg-card p-4 shadow-[0_8px_32px_rgba(129,140,248,0.2)] animate-spinSlow [animation-duration:18s] min-[480px]:block">
+            <p className="text-sm font-medium text-text-primary">Live Dashboard Ready</p>
           </div>
         </motion.div>
       </div>

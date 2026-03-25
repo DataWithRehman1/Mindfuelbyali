@@ -1,8 +1,9 @@
 const colorClasses = {
-  indigo: 'bg-indigo/10 text-indigo border-indigo/20',
-  cyan: 'bg-cyan/10 text-cyan border-cyan/20',
-  green: 'bg-success/10 text-success border-success/20',
-  grey: 'bg-bg-secondary text-text-secondary border-border'
+  indigo: 'bg-indigo/15 text-indigo-light border-indigo/40',
+  cyan: 'bg-cyan/15 text-cyan border-cyan/40',
+  green: 'bg-orange-400/15 text-orange-400 border-orange-400/30',
+  grey: 'bg-white/5 text-text-muted border-border',
+  nlp: 'bg-indigo-light/20 text-indigo-light border-indigo-light/30'
 };
 
 /**

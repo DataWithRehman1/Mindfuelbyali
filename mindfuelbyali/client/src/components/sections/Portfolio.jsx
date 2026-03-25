@@ -19,6 +19,13 @@ function Portfolio() {
     [activeTab]
   );
 
+  const badgeByTag = (tag) => {
+    if (tag === 'Data Science') return 'cyan';
+    if (tag === 'NLP') return 'nlp';
+    if (tag === 'Computer Vision') return 'green';
+    return 'indigo';
+  };
+
   return (
     <section id="work" className="section-spacing bg-bg-secondary">
       <div className="container-site">
@@ -38,8 +45,8 @@ function Portfolio() {
                 onClick={() => setActiveTab(tab)}
                 className={`focus-ring shrink-0 rounded-full border px-4 py-2 font-display text-sm font-semibold transition-all duration-300 ${
                   isActive
-                    ? 'border-indigo bg-indigo text-white'
-                    : 'border-border bg-white text-text-secondary hover:border-indigo hover:text-indigo'
+                    ? 'border-indigo bg-indigo text-text-primary'
+                    : 'border-border bg-white/5 text-text-secondary hover:border-indigo-light hover:text-indigo-light'
                 }`}
                 aria-label={`Filter by ${tab}`}
               >
@@ -59,19 +66,16 @@ function Portfolio() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: -8 }}
                 transition={{ duration: 0.32, delay: index * 0.06 }}
-                className="rounded-card border border-border bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover"
+                className="rounded-card border border-border bg-bg-card p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover"
               >
                 <div className="flex items-center justify-between gap-4">
-                  <Badge
-                    label={project.tag}
-                    color={project.tag === 'Data Science' ? 'cyan' : project.tag === 'Computer Vision' ? 'green' : 'indigo'}
-                  />
-                  <span className="rounded-full bg-bg-secondary px-3 py-1 text-xs font-display font-semibold text-text-secondary">
+                  <Badge label={project.tag} color={badgeByTag(project.tag)} />
+                  <span className="rounded-full bg-gradient-to-r from-indigo to-cyan px-3 py-1 text-xs font-display font-semibold text-text-primary">
                     {project.member}
                   </span>
                 </div>
 
-                <h3 className="mt-5 text-xl font-bold text-navy">{project.title}</h3>
+                <h3 className="mt-5 text-xl font-bold text-text-primary">{project.title}</h3>
                 <p className="mt-3 text-sm leading-[1.6] text-text-secondary">{project.problem}</p>
 
                 <div className="mt-4 rounded-md border-l-[3px] border-l-success bg-success/5 px-3.5 py-2.5 text-sm font-semibold text-success">
@@ -80,7 +84,7 @@ function Portfolio() {
 
                 <div className="mt-5 flex flex-wrap gap-2">
                   {project.tech.map((item) => (
-                    <span key={item} className="rounded-full bg-bg-secondary px-3 py-1 text-xs font-medium text-text-secondary">
+                    <span key={item} className="rounded-full bg-white/6 px-3 py-1 text-xs font-medium text-text-muted">
                       {item}
                     </span>
                   ))}
@@ -92,7 +96,7 @@ function Portfolio() {
                   target="_blank"
                   rel="noopener noreferrer"
                   variant="outline"
-                  className="mt-6 w-full"
+                  className="mt-6 w-full border-[1.5px] border-indigo text-indigo-light hover:bg-indigo hover:text-text-primary"
                   ariaLabel={`View live project for ${project.title}`}
                 >
                   View Live →

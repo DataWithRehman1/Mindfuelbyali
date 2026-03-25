@@ -1,9 +1,9 @@
 import { LoaderCircle } from 'lucide-react';
 
 const variantClasses = {
-  primary: 'bg-indigo text-white hover:bg-indigo-dark',
-  secondary: 'bg-navy text-white hover:bg-indigo',
-  outline: 'border-2 border-navy bg-transparent text-navy hover:bg-navy hover:text-white'
+  primary: 'bg-indigo text-text-primary hover:bg-indigo-dark',
+  secondary: 'bg-indigo text-text-primary hover:bg-indigo-dark',
+  outline: 'border-2 border-text-secondary bg-transparent text-text-primary hover:bg-text-primary hover:text-bg-primary'
 };
 
 const sizeClasses = {

@@ -43,7 +43,7 @@ function App() {
       <main className="flex min-h-screen items-center justify-center bg-bg-primary px-4">
         <div className="max-w-lg rounded-card border border-border bg-bg-card p-10 text-center shadow-card">
           <p className="font-display text-sm uppercase tracking-[0.2em] text-indigo">404</p>
-          <h1 className="mt-4 text-4xl font-extrabold leading-tight text-navy">Page Not Found</h1>
+          <h1 className="mt-4 text-4xl font-extrabold leading-tight text-text-primary">Page Not Found</h1>
           <p className="mt-4 text-base leading-relaxed text-text-secondary">
             The page you are looking for does not exist. Head back to the homepage and continue exploring.
           </p>

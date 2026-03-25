@@ -78,16 +78,16 @@ function Contact() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.55 }}
         >
-          <h2 className="text-3xl font-bold leading-tight text-navy sm:text-4xl">Let's Build Something Useful</h2>
+          <h2 className="text-3xl font-bold leading-tight text-text-primary sm:text-4xl">Let's Build Something Useful</h2>
           <p className="mt-5 max-w-lg text-base leading-[1.75] text-text-secondary">
             Tell us about your data challenge or AI idea. You will work directly with both founders, and we will reply within 24 hours with a practical roadmap.
           </p>
 
           <ul className="mt-8 space-y-4 text-sm text-text-secondary">
-            <li className="flex items-start gap-3"><Mail className="mt-0.5 h-4 w-4 shrink-0 text-indigo" /> mindfuelbyali@gmail.com</li>
-            <li className="flex items-start gap-3"><Globe className="mt-0.5 h-4 w-4 shrink-0 text-indigo" /> Remote - Available Worldwide</li>
-            <li className="flex items-start gap-3"><Clock3 className="mt-0.5 h-4 w-4 shrink-0 text-indigo" /> We respond within 24 hours</li>
-            <li className="flex items-start gap-3"><MessageCircle className="mt-0.5 h-4 w-4 shrink-0 text-indigo" /> Free 30-min strategy call available</li>
+            <li className="flex items-start gap-3"><Mail className="mt-0.5 h-4 w-4 shrink-0 text-indigo-light" /> mindfuelbyali@gmail.com</li>
+            <li className="flex items-start gap-3"><Globe className="mt-0.5 h-4 w-4 shrink-0 text-indigo-light" /> Remote - Available Worldwide</li>
+            <li className="flex items-start gap-3"><Clock3 className="mt-0.5 h-4 w-4 shrink-0 text-indigo-light" /> We respond within 24 hours</li>
+            <li className="flex items-start gap-3"><MessageCircle className="mt-0.5 h-4 w-4 shrink-0 text-indigo-light" /> Free 30-min strategy call available</li>
           </ul>
 
           <div className="mt-8 inline-flex rounded-full border border-success/20 bg-success/10 px-4 py-2 text-xs font-display font-semibold uppercase tracking-wide text-success">
@@ -107,7 +107,7 @@ function Contact() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.55 }}
           onSubmit={handleSubmit(onSubmit)}
-          className="rounded-card border border-border bg-white p-5 shadow-card sm:p-8"
+          className="rounded-card border border-border bg-bg-card p-5 shadow-card sm:p-8"
           noValidate
         >
           {[
@@ -132,7 +132,7 @@ function Contact() {
                 placeholder={field.label}
               />
               <label htmlFor={field.name} className="floating-label">{field.label}</label>
-              {errors[field.name] ? <p className="mt-1 text-xs text-red-500">{errors[field.name]?.message}</p> : null}
+              {errors[field.name] ? <p className="mt-1 text-xs text-red-400">{errors[field.name]?.message}</p> : null}
             </motion.div>
           ))}
 
@@ -165,7 +165,7 @@ function Contact() {
               placeholder="Message"
             />
             <label htmlFor="message" className="floating-label">Message</label>
-            {errors.message ? <p className="mt-1 text-xs text-red-500">{errors.message?.message}</p> : null}
+            {errors.message ? <p className="mt-1 text-xs text-red-400">{errors.message?.message}</p> : null}
           </div>
 
           <Button type="submit" className="w-full py-4" loading={isSubmitting} disabled={isSubmitting} ariaLabel="Send message">
@@ -179,10 +179,10 @@ function Contact() {
           ) : null}
 
           {submitState === 'success' ? (
-            <p className="mt-3 text-sm font-medium text-success">Message Sent! We'll be in touch soon.</p>
+            <p className="mt-3 rounded-md border border-success/30 bg-success/10 px-3 py-2 text-sm font-medium text-success">Message Sent! We'll be in touch soon.</p>
           ) : null}
           {submitState === 'error' ? (
-            <p className="mt-3 text-sm font-medium text-red-500">Something went wrong. Please try again.</p>
+            <p className="mt-3 rounded-md border border-red-400/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-400">Something went wrong. Please try again.</p>
           ) : null}
         </motion.form>
       </div>
@@ -212,7 +212,7 @@ function FloatingSelect({ name, label, register, options, error, value }) {
         ))}
       </select>
       <label htmlFor={name} className="floating-label">{label}</label>
-      {error ? <p className="mt-1 text-xs text-red-500">{error}</p> : null}
+      {error ? <p className="mt-1 text-xs text-red-400">{error}</p> : null}
     </div>
   );
 }
@@ -224,7 +224,7 @@ function FloatingSelect({ name, label, register, options, error, value }) {
  */
 function TechPill({ label }) {
   return (
-    <span className="rounded-full border border-border bg-bg-secondary px-3 py-1 text-xs font-display font-semibold text-navy">
+    <span className="rounded-full border border-border bg-white/6 px-3 py-1 text-xs font-display font-semibold text-text-muted">
       {label}
     </span>
   );
