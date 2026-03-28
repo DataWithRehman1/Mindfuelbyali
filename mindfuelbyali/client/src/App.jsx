@@ -4,11 +4,11 @@ import Footer from './components/layout/Footer';
 import Hero from './components/sections/Hero';
 import Services from './components/sections/Services';
 import Team from './components/sections/Team';
+import CTABanner from './components/sections/CTABanner';
 import Contact from './components/sections/Contact';
 import Button from './components/ui/Button';
 
 const Portfolio = lazy(() => import('./components/sections/Portfolio'));
-const Pricing = lazy(() => import('./components/sections/Pricing'));
 
 /**
  * Root app composition with a first-load spinner and a minimal 404 fallback.
@@ -62,6 +62,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <Services />
         <Team />
         <Suspense
           fallback={
@@ -72,16 +73,7 @@ function App() {
         >
           <Portfolio />
         </Suspense>
-        <Services />
-        <Suspense
-          fallback={
-            <div className="container-site py-20 text-center text-text-secondary" aria-live="polite">
-              Loading section...
-            </div>
-          }
-        >
-          <Pricing />
-        </Suspense>
+        <CTABanner />
         <Contact />
       </main>
       <Footer />

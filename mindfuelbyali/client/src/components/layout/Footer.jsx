@@ -69,7 +69,7 @@ function Footer() {
         <div>
           <h3 className="font-display text-sm uppercase tracking-[0.2em] text-text-primary/90">Platform</h3>
           <ul className="mt-5 space-y-3">
-            {['About', 'Team', 'Portfolio', 'Pricing', 'Contact'].map((item) => (
+            {['About', 'Team', 'Portfolio', 'Contact'].map((item) => (
               <li key={item}>
                 <a
                   href={`#${item.toLowerCase() === 'portfolio' ? 'work' : item.toLowerCase()}`}

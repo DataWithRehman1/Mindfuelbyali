@@ -9,7 +9,6 @@ const navItems = [
   { label: 'Team', to: 'team' },
   { label: 'Work', to: 'work' },
   { label: 'Services', to: 'services' },
-  { label: 'Pricing', to: 'pricing' },
   { label: 'Contact', to: 'contact' }
 ];
 
