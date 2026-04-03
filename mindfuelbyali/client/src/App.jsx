@@ -62,8 +62,8 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <Services />
         <Team />
+        <Services />
         <Suspense
           fallback={
             <div className="container-site py-20 text-center text-text-secondary" aria-live="polite">

@@ -97,19 +97,19 @@ function TeamCard({ member, index }) {
           href={member.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="focus-ring rounded-full border border-border p-2 text-text-muted transition-all duration-300 hover:text-indigo-light"
+          className="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-full border border-indigo/40 bg-indigo/10 text-indigo-light/90 transition-all duration-300 hover:border-indigo-light hover:bg-indigo/20 hover:text-text-primary hover:shadow-glow"
           aria-label={`${member.name} LinkedIn`}
         >
-          <Linkedin className="h-5 w-5" />
+          <Linkedin className="h-[22px] w-[22px]" />
         </a>
         <a
           href={member.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="focus-ring rounded-full border border-border p-2 text-text-muted transition-all duration-300 hover:text-indigo-light"
+          className="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-full border border-indigo/40 bg-indigo/10 text-indigo-light/90 transition-all duration-300 hover:border-indigo-light hover:bg-indigo/20 hover:text-text-primary hover:shadow-glow"
           aria-label={`${member.name} GitHub`}
         >
-          <Github className="h-5 w-5" />
+          <Github className="h-[22px] w-[22px]" />
         </a>
       </div>
     </motion.article>
